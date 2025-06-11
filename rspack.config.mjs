@@ -1,6 +1,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import TerserPlugin from "terser-webpack-plugin";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isRunningWebpack = !!process.env.WEBPACK;
@@ -29,6 +30,13 @@ const config = {
   experiments: {
     css: true,
   },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        // minify: TerserPlugin.swcMinify,
+      })
+    ]
+  }
 };
 
 export default config;
