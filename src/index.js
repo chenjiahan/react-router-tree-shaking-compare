@@ -1,3 +1,3 @@
-import('./render').then(exports => {
-    exports.render()
-})
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+console.log(BrowserRouter, Routes, Route);
