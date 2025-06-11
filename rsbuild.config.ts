@@ -6,9 +6,4 @@ export default defineConfig({
       root: "./rsbuild-dist",
     },
   },
-  performance: {
-    chunkSplit: {
-      strategy: "all-in-one",
-    }
-  }
 });
