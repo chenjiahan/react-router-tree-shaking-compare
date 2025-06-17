@@ -37,7 +37,4 @@ pnpm build:rspack
 # Build with vite
 pnpm build:vite
 # ...
-
-# Get the size of the output
-pnpm size
 ```

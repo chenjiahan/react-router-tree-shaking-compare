@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build:rspack": "rspack build",
-    "build:rsbuild": "rsbuild build",
-    "build:webpack": "webpack build -c ./rspack.config.mjs",
-    "build:vite": "vite build",
-    "build:farm": "farm build",
-    "build:rolldown": "rolldown -c ./rolldown.config.mjs",
-    "build:parcel": "parcel build src/index.html",
-    "build:bun": "bun build --minify --outfile=dist/index.js ./src/index.js",
-    "build:esbuild": "esbuild --bundle --minify --outfile=dist/index.js ./src/index.js",
+    "clean": "rimraf dist",
+    "build:rspack": "pnpm clean && rspack build && pnpm size",
+    "build:rsbuild": "pnpm clean && rsbuild build && pnpm size",
+    "build:webpack": "pnpm clean && webpack build -c ./rspack.config.mjs && pnpm size",
+    "build:vite": "pnpm clean && vite build && pnpm size",
+    "build:farm": "pnpm clean && farm build && pnpm size",
+    "build:rolldown": "pnpm clean && rolldown -c ./rolldown.config.mjs && pnpm size",
+    "build:parcel": "pnpm clean && parcel build src/index.html && pnpm size",
+    "build:bun": "pnpm clean && bun build --minify --outfile=dist/index.js ./src/index.js && pnpm size",
+    "build:esbuild": "pnpm clean && esbuild --bundle --minify --outfile=dist/index.js ./src/index.js && pnpm size",
     "size": "node get-size.mjs"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     "filesize": "^10.1.6",
     "gzip-size": "^7.0.0",
     "parcel": "^2.15.2",
+    "rimraf": "^6.0.1",
     "rolldown": "1.0.0-beta.16",
     "vite": "npm:rolldown-vite@latest"
   },
