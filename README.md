@@ -28,3 +28,16 @@ Use the default minimizer and build config of each tool.
 | Rolldown Vite | 45.99 kB      | 16.34 kB         |
 | esbuild       | 46.12 kB      | 16.63 kB         |
 | Bun           | 57.73 kB      | 20.8 kB          |
+
+## Test locally
+
+```bash
+# Build with rspack
+pnpm build:rspack
+# Build with vite
+pnpm build:vite
+# ...
+
+# Get the size of the output
+pnpm size
+```
