@@ -7,6 +7,8 @@
     "build:rsbuild": "rsbuild build",
     "build:webpack": "webpack build -c ./rspack.config.mjs",
     "build:vite": "vite build",
+    "build:farm": "farm build",
+    "build:rolldown": "rolldown -c ./rolldown.config.mjs",
     "build:parcel": "parcel build src/index.html",
     "build:bun": "bun build --minify --outfile=dist/index.js ./src/index.js",
     "build:esbuild": "esbuild --bundle --minify --outfile=dist/index.js ./src/index.js",
@@ -20,6 +22,8 @@
     "webpack-cli": "^6.0.1"
   },
   "devDependencies": {
+    "@farmfe/cli": "^1.0.4",
+    "@farmfe/core": "^1.7.5",
     "@rsbuild/core": "1.4.0-beta.4",
     "@swc/core": "^1.12.1",
     "cross-env": "^7.0.3",
@@ -27,6 +31,7 @@
     "filesize": "^10.1.6",
     "gzip-size": "^7.0.0",
     "parcel": "^2.15.2",
+    "rolldown": "1.0.0-beta.16",
     "vite": "npm:rolldown-vite@latest"
   },
   "packageManager": "pnpm@9.15.2",
