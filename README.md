@@ -1,19 +1,26 @@
-# rspack-repro
+# react-router-tree-shaking-compare
 
-- [Rspack website](https://rspack.dev/)
-- [Rspack repo](https://github.com/web-infra-dev/rspack)
+This is a minimal example to compare the tree-shaking behavior of different build tools and bundlers.
 
-A GitHub template for creating a Rspack minimal reproducible example.
+## Source code
 
-webpack is included for comparing the outputs.
+Take `react-router-dom` as the input, which is a pure ESM package and has no side effects.
 
-## Usages
+```js
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-`pnpm run build` would both run Rspack and webpack with config `./rspack.config.mjs`
+console.log(BrowserRouter, Routes, Route);
+```
 
-- Rspack will emits output in `./rspack-dist`
-- webpack will emits output in `./webpack-dist`
+## Output size
 
-`./webpack-dist` and `./rspack-dist` are purposely not added to `.gitignore`.
-
-It is recommended to commit these files so we quickly compare the outputs.
+| Build tool    | Minified size | Min+Gzipped size |
+| ------------- | ------------- | ---------------- |
+| Rspack        | 36.36 kB      | 13.26 kB         |
+| Rsbuild       | 36.4 kB       | 13.29 kB         |
+| webpack       | 36.96 kB      | 13.37 kB         |
+| Vite          | 42.67 kB      | 15.67 kB         |
+| Parcel        | 44.62 kB      | 16.07 kB         |
+| Rolldown Vite | 45.99 kB      | 16.34 kB         |
+| esbuild       | 46.12 kB      | 16.63 kB         |
+| Bun           | 57.73 kB      | 20.8 kB          |
