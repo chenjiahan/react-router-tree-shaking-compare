@@ -25,16 +25,19 @@
   "devDependencies": {
     "@farmfe/cli": "^1.0.4",
     "@farmfe/core": "^1.7.5",
-    "@rsbuild/core": "1.4.0-rc.0",
-    "@swc/core": "^1.12.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rsbuild/core": "1.4.0-beta.4",
+    "@swc/core": "nightly",
     "cross-env": "^7.0.3",
     "esbuild": "^0.25.5",
     "filesize": "^10.1.6",
     "gzip-size": "^7.0.0",
     "parcel": "^2.15.2",
     "rimraf": "^6.0.1",
-    "rolldown": "^1.0.0-beta.19",
-    "vite": "npm:rolldown-vite@7.0.0"
+    "rolldown": "1.0.0-beta.18",
+    "rollup-plugin-swc3": "^0.12.1",
+    "terser": "^5.43.0",
+    "vite": "latest"
   },
   "packageManager": "pnpm@9.15.2",
   "@parcel/resolver-default": {
