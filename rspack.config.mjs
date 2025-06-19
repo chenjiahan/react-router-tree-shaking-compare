@@ -6,8 +6,4 @@ export default {
   output: {
     clean: true,
   },
-  optimization: {
-    minimize: true,
-    // moduleIds: "named"
-  }
 };
