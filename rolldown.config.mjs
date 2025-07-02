@@ -18,13 +18,8 @@ export default defineConfig({
       module: true,
       // swc's minify option here
       mangle: {},
-      compress: {
-        passes: 2,
-      },
+      compress: {},
     }),
   ],
   profilerNames: false,
-  output: {
-    // minify: true,
-  },
 });
