@@ -7,7 +7,8 @@
     "build:rspack": "pnpm clean && rspack build && pnpm size",
     "build:rsbuild": "pnpm clean && rsbuild build && pnpm size",
     "build:webpack": "pnpm clean && webpack build -c ./rspack.config.mjs && pnpm size",
-    "build:vite": "pnpm clean && vite build && pnpm size",
+    "build:rolldown-vite": "VITE_BUNDLER='rolldown-vite' node_modules/rolldown-vite/bin/vite.js build && pnpm size",
+    "build:vite": "VITE_BUNDLER='vite' node_modules/vite/bin/vite.js build && pnpm size",
     "build:farm": "pnpm clean && farm build && pnpm size",
     "build:rolldown": "pnpm clean && rolldown -c ./rolldown.config.mjs && pnpm size",
     "build:parcel": "pnpm clean && parcel build src/index.html && pnpm size",
@@ -33,11 +34,17 @@
     "gzip-size": "^7.0.0",
     "parcel": "^2.15.2",
     "rimraf": "^6.0.1",
-    "rolldown": "^1.0.0-beta.19",
-    "vite": "npm:rolldown-vite@7.0.0"
+    "rolldown": "1.0.0-beta.23",
+    "rolldown-vite": "latest",
+    "vite": "7.0.0"
   },
   "packageManager": "pnpm@9.15.2",
   "@parcel/resolver-default": {
     "packageExports": true
+  },
+  "pnpm": {
+    "overrides": {
+      "rolldown": "1.0.0-beta.23"
+    }
   }
 }
