@@ -7,12 +7,13 @@
     "build:rspack": "pnpm clean && rspack build && pnpm size",
     "build:rsbuild": "pnpm clean && rsbuild build && pnpm size",
     "build:webpack": "pnpm clean && webpack build -c ./rspack.config.mjs && pnpm size",
-    "build:vite": "pnpm clean && vite build && pnpm size",
     "build:farm": "pnpm clean && farm build && pnpm size",
     "build:rolldown": "pnpm clean && rolldown -c ./rolldown.config.mjs && pnpm size",
     "build:parcel": "pnpm clean && parcel build src/index.html && pnpm size",
     "build:bun": "pnpm clean && bun build --minify --outfile=dist/index.js ./src/index.js && pnpm size",
     "build:esbuild": "pnpm clean && esbuild --bundle --minify --outfile=dist/index.js ./src/index.js && pnpm size",
+    "build:rolldown-vite": "VITE_BUNDLER='rolldown-vite' node_modules/rolldown-vite/bin/vite.js build && pnpm size",
+    "build:vite": "VITE_BUNDLER='vite' node_modules/vite/bin/vite.js build && pnpm size",
     "size": "node get-size.mjs"
   },
   "dependencies": {
@@ -34,13 +35,19 @@
     "gzip-size": "^7.0.0",
     "parcel": "^2.15.2",
     "rimraf": "^6.0.1",
-    "rolldown": "1.0.0-beta.18",
+    "rolldown": "1.0.0-beta.23",
     "rollup-plugin-swc3": "^0.12.1",
     "terser": "^5.43.0",
-    "vite": "latest"
+    "rolldown-vite": "latest",
+    "vite": "6.3.5"
   },
   "packageManager": "pnpm@9.15.2",
   "@parcel/resolver-default": {
     "packageExports": true
+  },
+  "pnpm": {
+    "overrides": {
+      "rolldown": "1.0.0-beta.23"
+    }
   }
 }

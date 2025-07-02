@@ -1,9 +1,14 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "rolldown-vite";
 
 import { minify } from "rollup-plugin-swc3";
 export default defineConfig({
   build: {
-    minify: false,
+    minify: true,
+    rollupOptions: {
+      treeshake: {
+        commonjs: true
+      }
+    }
   },
   plugins: [
     minify({
@@ -12,10 +17,7 @@ export default defineConfig({
       mangle: {},
       format: {
         comments: false,
-      },
-      compress: {
-        passes: 2,
-      },
+      }
     }),
   ],
 });
