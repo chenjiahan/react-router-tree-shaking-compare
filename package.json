@@ -26,9 +26,8 @@
   "devDependencies": {
     "@farmfe/cli": "^1.0.4",
     "@farmfe/core": "^1.7.5",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rsbuild/core": "1.4.0-beta.4",
-    "@swc/core": "nightly",
+    "@rsbuild/core": "1.4.0-rc.0",
+    "@swc/core": "^1.12.9",
     "cross-env": "^7.0.3",
     "esbuild": "^0.25.5",
     "filesize": "^10.1.6",
@@ -37,7 +36,6 @@
     "rimraf": "^6.0.1",
     "rolldown": "1.0.0-beta.23",
     "rollup-plugin-swc3": "^0.12.1",
-    "terser": "^5.43.0",
     "rolldown-vite": "latest",
     "vite": "6.3.5"
   },
