@@ -20,9 +20,9 @@ Use the default minimizer and build config of each tool.
 | ------------- | ------------- | ---------------- |
 | Rspack        | 36.35 kB      | 13.26 kB         |
 | Rsbuild       | 36.39 kB       | 13.29 kB         |
+| Rolldown Vite | 36.53 kB      | 13.28 kB         |
 | Rolldown      | 36.56 kB      | 13.29 kB         |
 | webpack       | 36.96 kB      | 13.37 kB         |
-| Rolldown Vite | 37.22 kB      | 13.55 kB         |
 | Vite          | 41.06 kB      | 14.76 kB         |
 | Farm          | 43.42 kB      | 15.63 kB         |
 | Parcel        | 44.62 kB      | 16.07 kB         |

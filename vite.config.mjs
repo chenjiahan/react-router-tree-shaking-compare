@@ -11,7 +11,8 @@ export default defineConfig({
         minify: false
       },
       profilerNames: false
-    }
+    },
+    modulePreload: { polyfill: false }
   },
   plugins: [
     minify({
