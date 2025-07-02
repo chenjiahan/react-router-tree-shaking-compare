@@ -18,8 +18,8 @@ Use the default minimizer and build config of each tool.
 
 | Build tool    | Minified size | Min+Gzipped size |
 | ------------- | ------------- | ---------------- |
-| Rspack        | 36.36 kB      | 13.26 kB         |
-| Rsbuild       | 36.4 kB       | 13.29 kB         |
+| Rspack        | 36.35 kB      | 13.26 kB         |
+| Rsbuild       | 36.39 kB       | 13.29 kB         |
 | Rolldown      | 36.56 kB      | 13.29 kB         |
 | webpack       | 36.96 kB      | 13.37 kB         |
 | Rolldown Vite | 37.22 kB      | 13.55 kB         |
